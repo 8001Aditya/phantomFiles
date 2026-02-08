@@ -1,16 +1,11 @@
-<html>
-	<body>
-		<center>
-			<h1> PhantomFiles</h1><br><br>
-			<b><p style="color:green; font-size:50px">SUCCESS</p></b>
-			<table>
-				<tr>
-					<td><a href='return-key/My_Key.pem' target="blank"><button>Download Key</button></a></td>
-					<td><a href='home'><button>Back to HOME</button></a></td>
-				</tr>
-			</table>
-			<br><h4>A Project by:</h4>
-			<h5>Aditya Upadhyay<br>B.Tech (CSE)<br>8719103</h5>
-		</center>
-	</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}PhantomFiles · Encryption Complete{% endblock %}
+
+{% block content %}
+<div class="status status-success">Encryption Complete</div>
+<div class="action-grid">
+  <a class="btn btn-primary" href="{{ url_for('return_key') }}" target="_blank">Download Key (.pem)</a>
+  <a class="btn btn-secondary" href="{{ url_for('back_home') }}">Back to Home</a>
+</div>
+{% endblock %}

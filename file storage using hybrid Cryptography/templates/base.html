@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}PhantomFiles{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <main class="page-wrap">
+    <section class="card">
+      <header class="card-header">
+        <p class="eyebrow">Hybrid Cryptography File Storage</p>
+        <h1>PhantomFiles</h1>
+        <p class="subtitle">Securely split, encrypt, and restore your files with a simple workflow.</p>
+      </header>
+
+      {% block content %}{% endblock %}
+
+      <footer class="card-footer">
+        <p>Built by Aditya Upadhyay · B.Tech (CSE)</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
